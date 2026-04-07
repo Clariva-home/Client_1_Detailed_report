@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clariva · 30-Day Growth Unlock Plan · Dusk &amp; Ritual</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#F7F4EE;
+  --ivory-deep:#EDE9E1;
+  --charcoal:#2D2D2A;
+  --stone:#6B6965;
+  --forest:#1C2B1A;
+  --green:#3A7556;
+  --gold:#C4933F;
+  --gold-light:#DEB96A;
+  --mist:#D6D3CB;
+  --w1:#3A7556;
+  --w2:#C4933F;
+  --w3:#1C2B1A;
+  --w4:#6B6965;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ivory);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  color:var(--charcoal);
+  font-size:14px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ── HEADER ── */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:var(--ivory);
+  border-bottom:1px solid var(--gold);
+  padding:14px 48px;
+  display:flex;justify-content:space-between;align-items:center;
+  backdrop-filter:blur(8px);
+}
+.wordmark{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:20px;
+  letter-spacing:.28em;color:var(--forest);
+  text-decoration:none;
+}
+.header-meta{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--stone);
+  text-align:right;line-height:1.7;
+}
+
+/* ── HERO ── */
+.hero{
+  background:var(--forest);
+  padding:72px 48px 56px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    45deg,transparent,transparent 40px,
+    rgba(196,147,63,.04) 40px,rgba(196,147,63,.04) 41px
+  );
+}
+.hero-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:48px;
+  color:#fff;line-height:1.05;
+  letter-spacing:-.01em;max-width:700px;
+}
+.hero-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:20px;
+  color:rgba(255,255,255,.6);margin-top:10px;
+}
+.hero-goal{
+  display:inline-block;margin-top:28px;
+  background:var(--gold);color:var(--forest);
+  padding:10px 20px;
+  font-family:'DM Mono',monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:500;
+}
+.hero-stats{
+  display:flex;gap:0;margin-top:40px;
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:28px;
+}
+.hero-stat{
+  flex:1;padding-right:32px;border-right:1px solid rgba(255,255,255,.1);
+  margin-right:32px;
+}
+.hero-stat:last-child{border-right:none;margin-right:0}
+.hs-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);margin-bottom:6px;
+}
+.hs-value{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:28px;color:#fff;line-height:1;
+}
+.hs-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px}
+
+/* ── LAYOUT ── */
+.container{max-width:1100px;margin:0 auto;padding:0 48px}
+.section-wrap{padding:64px 0}
+
+/* ── SECTION HEADER ── */
+.sec-label-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.sec-label{
+  font-family:'DM Mono',monospace;
+  font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);white-space:nowrap;flex-shrink:0;
+}
+.gold-rule{flex:1;height:1px;background:var(--gold);opacity:.45}
+.sec-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:28px;
+  color:var(--forest);letter-spacing:.01em;
+}
+
+/* ── OUTCOME DASHBOARD ── */
+.outcome-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--mist);margin-top:24px;
+  border:1px solid var(--mist);
+}
+.outcome-card{
+  background:var(--ivory);
+  padding:24px 20px;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background .25s;cursor:default;
+}
+.outcome-card:hover{background:var(--ivory-deep)}
+.oc-icon{font-size:20px;margin-bottom:4px}
+.oc-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--stone);
+}
+.oc-value{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:26px;color:var(--forest);line-height:1;
+}
+.oc-desc{font-size:12px;color:var(--stone);line-height:1.4;margin-top:2px}
+.oc-bar-wrap{margin-top:10px;height:3px;background:var(--mist);border-radius:2px;overflow:hidden}
+.oc-bar{height:3px;background:var(--gold);border-radius:2px;width:0;transition:width 1.4s ease .3s}
+
+/* ── WEEK TIMELINE ── */
+.week-nav{
+  display:flex;gap:0;margin:40px 0 0;
+  border:1px solid var(--mist);overflow:hidden;
+}
+.week-tab{
+  flex:1;padding:14px 16px;
+  cursor:pointer;
+  border-right:1px solid var(--mist);
+  background:var(--ivory);
+  transition:background .2s,color .2s;
+  display:flex;flex-direction:column;gap:4px;
+  position:relative;
+}
+.week-tab:last-child{border-right:none}
+.week-tab::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:3px;background:transparent;transition:background .2s;
+}
+.week-tab.active::after{background:var(--gold)}
+.week-tab.active{background:var(--ivory-deep)}
+.wt-num{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+}
+.wt-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:14px;color:var(--forest);line-height:1.2;
+}
+.wt-focus{font-size:11px;color:var(--stone)}
+
+/* ── WEEK PANELS ── */
+.week-panels{position:relative}
+.week-panel{display:none}
+.week-panel.active{display:block}
+
+.week-header{
+  background:var(--forest);
+  padding:28px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:0;
+}
+.wh-left{}
+.wh-tag{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;
+}
+.wh-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:26px;color:#fff;
+}
+.wh-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:15px;
+  color:rgba(255,255,255,.55);margin-top:4px;
+}
+.wh-focus{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);text-align:right;
+  border:1px solid rgba(255,255,255,.15);
+  padding:8px 14px;line-height:1.6;
+}
+
+/* ── STEP CARDS ── */
+.steps-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--mist);border-top:none}
+.step-card{
+  border-top:1px solid var(--mist);
+  background:var(--ivory);
+  overflow:hidden;
+  transition:background .2s;
+}
+.step-card:hover{background:var(--ivory-deep)}
+.step-header{
+  display:flex;align-items:stretch;cursor:pointer;
+  user-select:none;
+}
+.step-num{
+  width:56px;flex-shrink:0;
+  background:var(--forest);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.14em;color:var(--gold);
+  writing-mode:vertical-rl;text-transform:uppercase;
+}
+.step-summary{
+  flex:1;padding:18px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.step-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:17px;color:var(--forest);
+  line-height:1.2;
+}
+.step-complexity{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 10px;border:1px solid var(--mist);color:var(--stone);
+  white-space:nowrap;flex-shrink:0;
+}
+.step-complexity.low{border-color:var(--green);color:var(--green)}
+.step-complexity.moderate{border-color:var(--gold);color:var(--gold)}
+.step-chevron{
+  flex-shrink:0;width:24px;height:24px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--stone);font-size:12px;
+  transition:transform .3s;margin-right:4px;
+}
+.step-card.open .step-chevron{transform:rotate(180deg)}
+
+.step-body{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease;
+  border-top:0px solid var(--mist);
+}
+.step-card.open .step-body{max-height:600px;border-top:1px solid var(--mist)}
+.step-body-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+}
+.step-col{padding:20px 20px 20px 76px}
+.step-col:first-child{border-right:1px solid var(--mist)}
+.step-col-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:8px;
+}
+.step-col-text{font-size:13px;color:var(--charcoal);line-height:1.6}
+.step-col-text strong{font-weight:500;color:var(--forest)}
+.step-col-text ul{padding-left:18px;margin-top:6px;display:flex;flex-direction:column;gap:4px}
+.step-col-text li{font-size:12.5px}
+
+.outcome-pill{
+  display:inline-block;
+  background:var(--forest);
+  color:var(--ivory);
+  padding:5px 12px;
+  font-family:'DM Mono',monospace;
+  font-size:9.5px;letter-spacing:.12em;
+  margin-top:10px;
+}
+
+/* ── CAUSAL CHAIN ── */
+.causal-chain{
+  display:flex;align-items:stretch;
+  border:1px solid var(--mist);
+  overflow:hidden;margin-top:28px;
+}
+.cc-node{
+  flex:1;padding:20px 16px;
+  display:flex;flex-direction:column;gap:6px;
+  border-right:1px solid var(--mist);
+  position:relative;cursor:default;
+  transition:background .2s;
+}
+.cc-node:hover{background:var(--ivory-deep)}
+.cc-node:last-child{border-right:none;background:var(--forest)}
+.cc-node:last-child:hover{background:#243d22}
+.cc-arrow{
+  position:absolute;right:-13px;top:50%;
+  transform:translateY(-50%);
+  font-size:18px;color:var(--gold);
+  z-index:2;font-family:'Cormorant Garamond',serif;
+  background:var(--ivory);padding:0 2px;line-height:1;
+}
+.cc-node:hover .cc-arrow{background:var(--ivory-deep)}
+.cc-node:last-child .cc-arrow{display:none}
+.cc-tag{
+  font-family:'DM Mono',monospace;
+  font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);
+}
+.cc-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:14px;color:var(--forest);
+  line-height:1.2;
+}
+.cc-node:last-child .cc-title{color:#fff}
+.cc-text{font-size:11.5px;color:var(--stone);line-height:1.4}
+.cc-node:last-child .cc-text{color:rgba(255,255,255,.55)}
+
+/* ── PROGRESS CHART ── */
+.progress-chart{
+  background:var(--ivory-deep);
+  border:1px solid var(--mist);
+  padding:32px;margin-top:28px;
+}
+.pc-title{
+  font-family:'DM Mono',monospace;
+  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+}
+.pc-metric{margin-bottom:20px}
+.pc-metric:last-child{margin-bottom:0}
+.pc-meta{display:flex;justify-content:space-between;margin-bottom:8px;align-items:baseline}
+.pc-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:15px;color:var(--forest);
+}
+.pc-range{
+  font-family:'DM Mono',monospace;
+  font-size:10px;color:var(--stone);letter-spacing:.1em;
+}
+.pc-track{
+  height:6px;background:var(--mist);border-radius:3px;
+  position:relative;overflow:visible;
+}
+.pc-fill{
+  height:6px;border-radius:3px;
+  width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1) .2s;
+  position:relative;
+}
+.pc-fill::after{
+  content:attr(data-label);
+  position:absolute;right:0;top:-22px;
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.1em;
+  color:var(--gold);white-space:nowrap;
+}
+.pc-marker{
+  position:absolute;top:-3px;
+  width:2px;height:12px;background:var(--stone);opacity:.4;
+}
+.pc-marker-label{
+  position:absolute;top:14px;
+  font-family:'DM Mono',monospace;font-size:8px;
+  color:var(--stone);transform:translateX(-50%);white-space:nowrap;
+}
+
+/* ── SUMMARY TABLE ── */
+.sum-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:13px}
+.sum-table thead tr{background:var(--forest)}
+.sum-table thead th{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ivory);padding:12px 16px;text-align:left;font-weight:400;
+}
+.sum-table tbody tr:nth-child(even){background:var(--ivory-deep)}
+.sum-table tbody tr:nth-child(odd){background:var(--ivory)}
+.sum-table tbody tr{border-bottom:1px solid var(--mist);transition:background .15s}
+.sum-table tbody tr:hover{background:#e4e0d7}
+.sum-table td{padding:12px 16px;vertical-align:top;font-weight:300}
+.sum-table td:first-child{font-weight:500;color:var(--forest);white-space:nowrap;font-size:12.5px}
+.td-badge{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 8px;margin-right:6px;
+}
+.badge-low{background:#eaf2ed;color:var(--green)}
+.badge-mod{background:#faf3e6;color:var(--gold)}
+.td-outcome{color:var(--green);font-weight:400}
+
+/* ── BOTTOM BAND ── */
+.bottom-band{
+  background:var(--forest);
+  padding:56px 48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  margin-top:0;
+}
+.bb-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+}
+.bb-text{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:24px;color:#fff;
+  line-height:1.3;
+}
+.bb-sub{
+  font-family:'Jost',sans-serif;
+  font-weight:300;font-size:13px;
+  color:rgba(255,255,255,.5);margin-top:14px;line-height:1.6;
+}
+.bb-milestones{display:flex;flex-direction:column;gap:14px}
+.bb-milestone{
+  display:flex;align-items:flex-start;gap:14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-bottom:14px;
+}
+.bb-milestone:last-child{border-bottom:none;padding-bottom:0}
+.bb-day{
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);padding-top:3px;white-space:nowrap;
+  min-width:56px;
+}
+.bb-ms-text{font-size:13px;color:rgba(255,255,255,.7);line-height:1.5}
+.bb-ms-text strong{color:#fff;font-weight:500}
+
+/* ── FOOTER ── */
+.site-footer{
+  border-top:1px solid var(--mist);
+  padding:20px 48px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--ivory);
+}
+.footer-text{
+  font-family:'DM Mono',monospace;
+  font-size:9.5px;color:var(--stone);letter-spacing:.1em;
+}
+
+/* ── DIVIDER ── */
+.gold-divider{height:1px;background:var(--gold);opacity:.3;margin:0}
+
+/* ── WEEK COLOR ACCENTS ── */
+.w1 .step-num,.w1 .wh-tag,.w1 .step-col-label{color:#3A7556 !important}
+.w2 .step-num,.w2 .wh-tag,.w2 .step-col-label{color:var(--gold) !important}
+.w3 .step-num,.w3 .wh-tag,.w3 .step-col-label{color:var(--gold) !important}
+.w4 .step-num,.w4 .wh-tag,.w4 .step-col-label{color:var(--gold) !important}
+
+/* scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--ivory-deep)}
+::-webkit-scrollbar-thumb{background:var(--mist)}
+::-webkit-scrollbar-thumb:hover{background:var(--stone)}
+
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .hero{padding:40px 20px}
+  .hero-title{font-size:32px}
+  .outcome-grid{grid-template-columns:1fr 1fr}
+  .week-tab{padding:10px 12px}
+  .step-body-inner{grid-template-columns:1fr}
+  .step-col:first-child{border-right:none;border-bottom:1px solid var(--mist)}
+  .bottom-band{grid-template-columns:1fr;gap:40px;padding:40px 20px}
+  .causal-chain{flex-direction:column}
+  .cc-arrow{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a class="wordmark" href="https://clariva-home.github.io/Clariva/">CLARIVA</a>
+  <div class="header-meta">
+    30-Day Action Plan &nbsp;·&nbsp; Dusk &amp; Ritual<br>
+    April 2026 &nbsp;·&nbsp; Confidential
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Clariva Growth Unlock · 30-Day Execution Plan</div>
+  <div class="hero-title reveal">Dusk &amp; Ritual:<br>30-Day Growth Unlock</div>
+  <div class="hero-subtitle reveal">From ₹10L Plateau to ₹15L/Month — Systematically.</div>
+  <div class="hero-goal reveal">Goal: ₹10L → ₹15L by fixing systemic leaks, not increasing spend</div>
+  <div class="hero-stats">
+    <div class="hero-stat reveal">
+      <div class="hs-label">Failure Mode Diagnosed</div>
+      <div class="hs-value">The Plateau Brand</div>
+      <div class="hs-sub">MER 8.4× · CVR 1.8–2.3%</div>
+    </div>
+    <div class="hero-stat reveal">
+      <div class="hs-label">Execution Pillars</div>
+      <div class="hs-value">4 Weeks</div>
+      <div class="hs-sub">11 steps · No budget increase required</div>
+    </div>
+    <div class="hero-stat reveal">
+      <div class="hs-label">Revenue Target</div>
+      <div class="hs-value">₹15L+</div>
+      <div class="hs-sub">Same efficiency · Better system</div>
+    </div>
+    <div class="hero-stat reveal">
+      <div class="hs-label">Profit Recovery</div>
+      <div class="hs-value">₹50K+</div>
+      <div class="hs-sub">Monthly, from packaging + RTO fixes</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- CAUSAL CHAIN -->
+<section class="section-wrap" style="padding-bottom:40px">
+  <div class="container">
+    <div class="sec-label-row reveal">
+      <span class="sec-label">The Diagnostic Foundation</span>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="sec-heading reveal">Why This Plan Works: The Causal Chain</div>
+    <p class="reveal" style="font-size:13px;color:var(--stone);margin-top:8px;max-width:680px">These 11 steps are not random tasks. They attack a single causal sequence. Fix the root, and every downstream symptom resolves.</p>
+
+    <div class="causal-chain reveal">
+      <div class="cc-node">
+        <div class="cc-arrow">→</div>
+        <div class="cc-tag">Root</div>
+        <div class="cc-title">Measurement Blackout</div>
+        <div class="cc-text">LTV unknown. Every rupee of spend feels like risk, not investment.</div>
+      </div>
+      <div class="cc-node">
+        <div class="cc-arrow">→</div>
+        <div class="cc-tag">System</div>
+        <div class="cc-title">Scaling Fear</div>
+        <div class="cc-text">Confidence stays low. Meta spend stagnates at ₹1.2L/month.</div>
+      </div>
+      <div class="cc-node">
+        <div class="cc-arrow">→</div>
+        <div class="cc-tag">Tactic</div>
+        <div class="cc-title">Wrong Hero Offer</div>
+        <div class="cc-text">Starter Kit (₹1,595) pushed to "increase AOV" — market rejects it.</div>
+      </div>
+      <div class="cc-node">
+        <div class="cc-arrow">→</div>
+        <div class="cc-tag">Result</div>
+        <div class="cc-title">Low CVR · Ghost Churn</div>
+        <div class="cc-text">Revenue stalls at ₹10L. Retention leaks silently in the background.</div>
+      </div>
+      <div class="cc-node">
+        <div class="cc-arrow">→</div>
+        <div class="cc-tag">The Truth</div>
+        <div class="cc-title">Scaling a Broken Offer Through a Leaky Bucket</div>
+        <div class="cc-text">More traffic cannot fix a system designed to reject it. Fix the system first.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTED OUTCOMES -->
+<section style="background:var(--ivory-deep);padding:56px 0">
+  <div class="container">
+    <div class="sec-label-row reveal">
+      <span class="sec-label">By Day 30 — Projected Outcomes</span>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="sec-heading reveal">What Success Looks Like</div>
+
+    <div class="outcome-grid reveal">
+      <div class="outcome-card">
+        <div class="oc-label">Conversion Rate</div>
+        <div class="oc-value">3.5%</div>
+        <div class="oc-desc">Up from 1.8–2.3% by aligning TOF ads with the Repair Oil PDP</div>
+        <div class="oc-bar-wrap"><div class="oc-bar" data-width="58" style="background:var(--green)"></div></div>
+      </div>
+      <div class="outcome-card">
+        <div class="oc-label">Profit Recovery</div>
+        <div class="oc-value">₹50K+</div>
+        <div class="oc-desc">Monthly savings from Eco-Lite packaging and COD verification</div>
+        <div class="oc-bar-wrap"><div class="oc-bar" data-width="72" style="background:var(--gold)"></div></div>
+      </div>
+      <div class="outcome-card">
+        <div class="oc-label">Retention Revenue</div>
+        <div class="oc-value">+15%</div>
+        <div class="oc-desc">Automated via the 45-day WhatsApp replenishment trigger</div>
+        <div class="oc-bar-wrap"><div class="oc-bar" data-width="45" style="background:var(--forest)"></div></div>
+      </div>
+      <div class="outcome-card">
+        <div class="oc-label">RTO Rate Target</div>
+        <div class="oc-value">&lt;15%</div>
+        <div class="oc-desc">Down from 30% via WhatsApp COD verification flow</div>
+        <div class="oc-bar-wrap"><div class="oc-bar" data-width="85" style="background:#C45A3F"></div></div>
+      </div>
+    </div>
+
+    <!-- Progress Chart -->
+    <div class="progress-chart reveal" style="margin-top:32px">
+      <div class="pc-title">Revenue Trajectory — 30-Day Projection</div>
+
+      <div class="pc-metric">
+        <div class="pc-meta">
+          <span class="pc-name">Monthly Revenue</span>
+          <span class="pc-range">₹10L → ₹15L target</span>
+        </div>
+        <div class="pc-track">
+          <div class="pc-fill" data-width="67" data-label="₹15L target" style="background:linear-gradient(90deg,var(--green),var(--gold))"></div>
+          <div class="pc-marker" style="left:43%"><span class="pc-marker-label" style="left:0">Today ₹10L</span></div>
+        </div>
+      </div>
+
+      <div class="pc-metric">
+        <div class="pc-meta">
+          <span class="pc-name">Conversion Rate (CVR)</span>
+          <span class="pc-range">1.8% → 3.5% target</span>
+        </div>
+        <div class="pc-track">
+          <div class="pc-fill" data-width="58" data-label="3.5% (post-pivot)" style="background:var(--green)"></div>
+          <div class="pc-marker" style="left:29%"><span class="pc-marker-label" style="left:0">Now 1.8%</span></div>
+        </div>
+      </div>
+
+      <div class="pc-metric">
+        <div class="pc-meta">
+          <span class="pc-name">RTO Rate</span>
+          <span class="pc-range">30% → &lt;15% (lower is better)</span>
+        </div>
+        <div class="pc-track">
+          <div class="pc-fill" data-width="25" data-label="&lt;15% target" style="background:var(--gold)"></div>
+          <div class="pc-marker" style="left:60%"><span class="pc-marker-label" style="left:0">Now 30%</span></div>
+        </div>
+      </div>
+
+      <div class="pc-metric">
+        <div class="pc-meta">
+          <span class="pc-name">Retention / Repeat Rate</span>
+          <span class="pc-range">28% → 40%+ target</span>
+        </div>
+        <div class="pc-track">
+          <div class="pc-fill" data-width="55" data-label="40%+ with replenishment loop" style="background:var(--forest)"></div>
+          <div class="pc-marker" style="left:38%"><span class="pc-marker-label" style="left:0">Now 28%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK TABS + STEPS -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="sec-label-row reveal">
+      <span class="sec-label">The 30-Day Execution Plan</span>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="sec-heading reveal">Eleven Steps, Four Weeks, One System</div>
+    <p class="reveal" style="font-size:13px;color:var(--stone);margin-top:8px;margin-bottom:0;max-width:640px">Each step is sequenced by dependency. Week 1 unlocks Week 2. You cannot scale what you cannot measure. Click each step to expand the full action detail.</p>
+
+    <!-- Week Nav -->
+    <div class="week-nav reveal" id="weekNav">
+      <div class="week-tab active" data-week="1">
+        <div class="wt-num">Week 01 · Days 1–7</div>
+        <div class="wt-title">Margin &amp; Measurement Foundation</div>
+        <div class="wt-focus">Stop the bleed · Install the fuel gauge</div>
+      </div>
+      <div class="week-tab" data-week="2">
+        <div class="wt-num">Week 02 · Days 8–14</div>
+        <div class="wt-title">The Acquisition Pivot</div>
+        <div class="wt-focus">Align Meta ads with market intent</div>
+      </div>
+      <div class="week-tab" data-week="3">
+        <div class="wt-num">Week 03 · Days 15–21</div>
+        <div class="wt-title">The Retention Engine</div>
+        <div class="wt-focus">Capture the 45-day exhaustion cycle</div>
+      </div>
+      <div class="week-tab" data-week="4">
+        <div class="wt-num">Week 04 · Days 22–30</div>
+        <div class="wt-title">Scaling Agility</div>
+        <div class="wt-focus">Convert data into disciplined growth</div>
+      </div>
+    </div>
+
+    <!-- WEEK 1 -->
+    <div class="week-panels">
+    <div class="week-panel active" id="week-1">
+      <div class="week-header">
+        <div class="wh-left">
+          <div class="wh-tag">Week 01 · Days 1–7</div>
+          <div class="wh-title">Margin &amp; Measurement Foundation</div>
+          <div class="wh-sub">Before you scale anything, you must know what you're scaling.</div>
+        </div>
+        <div class="wh-focus">Focus: Stop the bleed.<br>Install the fuel gauge.</div>
+      </div>
+      <div class="steps-list w1">
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 01</div>
+            <div class="step-summary">
+              <div class="step-title">Install the Clariva Measurement Stack</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity low">Complexity: Low</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Go to <strong>Shopify Analytics → Reports → Customers → Retention Analysis.</strong> Map the % of customers who bought in January 2026 and returned by March 2026. If Shopify reports feel insufficient, install <strong>Lifetimely</strong> (free tier available) to track 90-day LTV cohorts automatically.
+                </div>
+                <div class="outcome-pill">Outcome: Baseline LTV visibility established</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  Isolate the "Returning Customer Rate" specifically for the <strong>Repair Oil SKU</strong> — this is your LTV driver. Do not aggregate across all products. A blended rate will hide the Oil's true retention signal.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 02</div>
+            <div class="step-summary">
+              <div class="step-title">Device-Split Measurement Setup</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity low">Complexity: Low</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Open <strong>Google Analytics (GA4) or Shopify Reports.</strong> Filter your Conversion Rate by "Device Category." Look at the last 90 days for statistical significance. <strong>The diagnostic signal:</strong> if Desktop CVR is 4% and Mobile CVR is 1.2%, you have a confirmed technical/UX bottleneck on phones — not a traffic quality problem.
+                </div>
+                <div class="outcome-pill">Outcome: Mobile vs desktop CVR gap quantified</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">What This Unlocks</div>
+                <div class="step-col-text">
+                  This data point is the single most important number in your diagnostic stack. Without it, you cannot distinguish between "bad traffic" and "bad page experience." Most D2C founders at your revenue band are blind to this gap and mistakenly blame their creative agency.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 03</div>
+            <div class="step-summary">
+              <div class="step-title">Mobile UX Friction Test &amp; Fixes</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Perform a <strong>"Live Buy" test</strong> on both Android and iPhone. Complete the full purchase journey as a cold visitor. Then implement the following fixes:
+                  <ul>
+                    <li><strong>Sticky ATC:</strong> Ensure "Add to Cart" is always visible at screen bottom as the user scrolls — this alone can lift mobile CVR by 0.3–0.5%</li>
+                    <li><strong>Review Visibility:</strong> Move star ratings and customer photos directly under the product title — above the fold on mobile</li>
+                    <li><strong>Pop-up Cleanse:</strong> Disable newsletter pop-ups that cover the full mobile screen for cold traffic — they kill conversion at the worst moment</li>
+                  </ul>
+                  <div class="outcome-pill">Outcome: Mobile conversion friction reduced</div>
+                </div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  Requires a Shopify developer or theme settings adjustment. If your developer is unavailable, use <strong>PageFly or Shogun</strong> to rearrange blocks without code. Do not let this step wait — mobile UX is the single highest-leverage fix available at zero media cost.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 04</div>
+            <div class="step-summary">
+              <div class="step-title">Eco-Lite Shipping Protocol</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity low">Complexity: Low</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Order plain, high-quality corrugated boxes for first-time orders. <strong>Reserve the "Intentional Unboxing"</strong> (custom prints, ribbons, extras) strictly for second-order customers and above. This is a procurement shift, not a quality downgrade.
+                  <br><br>
+                  Add a small printed note inside Order 1: <em>"We invest in your ingredients, not the trash. Expect a special surprise in your next order."</em> This manages expectations while teasing the next purchase.
+                </div>
+                <div class="outcome-pill">Outcome: ₹40–50 saved per acquisition order</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">The Economics</div>
+                <div class="step-col-text">
+                  At your current scale of ~1,000 orders/month, saving ₹45 per first-time order generates approximately <strong>₹45,000/month in pure profit recovery</strong> — before a single additional sale. That recovered margin can be directly reinvested into Meta spend for organic growth compounding.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 05</div>
+            <div class="step-summary">
+              <div class="step-title">WhatsApp COD Verification Flow</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Set up an automated message via <strong>Interakt or BiteSpeed</strong> that triggers the moment a COD order is placed. The order enters a "Pending Confirmation" state. It is only marked "Confirmed" once the customer replies with "1" or a one-time PIN.
+                  <br><br>
+                  The message template: <em>"Your Dusk &amp; Ritual order #XXXX is placed! To confirm dispatch, reply 1. No reply within 4 hours = auto-cancelled."</em>
+                </div>
+                <div class="outcome-pill">Outcome: RTO drops from 30% to &lt;15%</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  Requires setting up a flow in your WhatsApp tool. Allow 2–3 days for setup and testing. <strong>Do not launch on full COD volume immediately</strong> — test with 20% of COD orders for 48 hours first to catch edge cases. The RTO reduction alone recovers approximately ₹15,000–₹20,000/month in wasted logistics cost.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="week-panel" id="week-2">
+      <div class="week-header">
+        <div class="wh-left">
+          <div class="wh-tag">Week 02 · Days 8–14</div>
+          <div class="wh-title">The Acquisition Pivot</div>
+          <div class="wh-sub">Stop paying Meta to send people to your lowest-converting path.</div>
+        </div>
+        <div class="wh-focus">Focus: Align ads<br>with market intent.</div>
+      </div>
+      <div class="steps-list w2">
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 06</div>
+            <div class="step-summary">
+              <div class="step-title">The Hero Shift in Meta Ads</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity low">Complexity: Low</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  In your Meta Ads Manager: <strong>turn off all ad sets</strong> currently landing on the Starter Kit PDP. Redirect 100% of Top-of-Funnel (TOF) budget to the <strong>Repair Oil PDP.</strong> This is a dashboard change — no new creative required at this stage.
+                  <br><br>
+                  The data rationale: Repair Oil has a <strong>14% ATC rate vs. 7%</strong> for the Starter Kit. You are currently paying Meta to send people to the path that converts at half the rate.
+                </div>
+                <div class="outcome-pill">Outcome: Site-wide CVR moves 2% → 3.5%+</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  Ensure the existing ad creative <strong>specifically highlights the "30-Day Transformation"</strong> of the Oil — not just the ingredients. If your current creative focuses on ceramide science, pause it and run a simple UGC-style before/after video. Creative-offer alignment is as important as the offer itself.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 07</div>
+            <div class="step-summary">
+              <div class="step-title">Impact-First PDP Rebuild</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Edit the Repair Oil product page with a strict above/below fold discipline:
+                  <ul>
+                    <li><strong>Remove:</strong> "Ceramide Science" text from the hero section</li>
+                    <li><strong>Replace with:</strong> A Before/After visual slider + headline: <em>"Waking up to glowing skin isn't a ritual, it's a result."</em></li>
+                    <li><strong>Add:</strong> A "7-day Impact" stat block and 3–4 customer photo reviews — all visible without scrolling</li>
+                    <li><strong>Move below fold:</strong> "How it works" + full ingredient education section</li>
+                  </ul>
+                  <div class="outcome-pill">Outcome: Faster ATC · Lower mobile bounce rate</div>
+                </div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  After every PDP edit, <strong>check the mobile preview</strong> in Shopify before publishing. The "Add to Cart" button must be visible without a single scroll on mobile. This is non-negotiable — your traffic is majority mobile and the button visibility gap alone accounts for a material CVR deficit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div class="week-panel" id="week-3">
+      <div class="week-header">
+        <div class="wh-left">
+          <div class="wh-tag">Week 03 · Days 15–21</div>
+          <div class="wh-title">The Retention Engine</div>
+          <div class="wh-sub">Customers run out of product and drift. Your system must intercept them at exactly Day 42.</div>
+        </div>
+        <div class="wh-focus">Focus: Capture<br>the 45-day cycle.</div>
+      </div>
+      <div class="steps-list w3">
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 08</div>
+            <div class="step-summary">
+              <div class="step-title">Launch the 45-Day Replenishment Loop</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Set up an automated WhatsApp/Email trigger keyed to the <strong>purchase date of any 30ml SKU.</strong> Two-message sequence:
+                  <ul>
+                    <li><strong>Day 35 (Value):</strong> <em>"How's the glow? You should be halfway through your Repair Oil by now. Consistency is the real ritual."</em></li>
+                    <li><strong>Day 42 (Conversion):</strong> <em>"Don't let your skin go hungry. Your bottle is likely empty. Refill today and get 10% off your next order."</em></li>
+                  </ul>
+                  This sequence converts your existing customer base into <strong>zero-ad-cost revenue.</strong>
+                  <div class="outcome-pill">Outcome: +10–15% revenue from automated repeats</div>
+                </div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Points</div>
+                <div class="step-col-text">
+                  Requires syncing Shopify order dates with your communication tool (Klaviyo / BiteSpeed / Interakt). <strong>Exclude customers</strong> who have already repurchased within that window — sending a replenishment discount to someone who just paid full price destroys trust.
+                  <br><br>
+                  The 10% discount on Day 42 is a margin-positive trade. Recovering a lapsed customer at ₹116 off is infinitely cheaper than re-acquiring them via Meta at ₹400+ CAC.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 09</div>
+            <div class="step-summary">
+              <div class="step-title">Trial-to-Routine Upsell (Starter Kit Repositioning)</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity low">Complexity: Low</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Remove the Starter Kit from all acquisition ad creative. Reposition it exclusively as a <strong>"Post-Purchase Cross-sell."</strong>
+                  <br><br>
+                  Tactic: 5 minutes after a customer buys the Repair Oil, trigger an email/WhatsApp:
+                  <br><em>"Want to complete the ritual? Add the full Starter Kit — Moisturiser + Cleanser — for ₹X extra. Added to your order if claimed in the next 30 minutes."</em>
+                </div>
+                <div class="outcome-pill">Outcome: AOV protected without hurting TOF CVR</div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Why This Works</div>
+                <div class="step-col-text">
+                  The Starter Kit fails as an acquisition offer because <strong>strangers reject high-priced trials.</strong> But existing buyers — who have already made a trust decision — are dramatically more likely to expand. You preserve AOV without using a friction point as your first impression.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div class="week-panel" id="week-4">
+      <div class="week-header">
+        <div class="wh-left">
+          <div class="wh-tag">Week 04 · Days 22–30</div>
+          <div class="wh-title">Scaling Agility</div>
+          <div class="wh-sub">The system is now fixed. This week you convert data into disciplined, compounding growth.</div>
+        </div>
+        <div class="wh-focus">Focus: Scale<br>with discipline.</div>
+      </div>
+      <div class="steps-list w4">
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 10</div>
+            <div class="step-summary">
+              <div class="step-title">The MER Scaling Test</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  Calculate your <strong>new Net Contribution Margin</strong> after the Week 1 packaging and RTO fixes. Then:
+                  <ul>
+                    <li>If CVR has improved from 2% to 3%+ (confirmed via GA4), increase Meta spend by <strong>20% every 3 days</strong></li>
+                    <li>Continue until your <strong>blended MER reaches 20%</strong> — the "Growth Threshold" where spend is self-funding</li>
+                    <li>Formula: MER = Total Revenue ÷ Total Ad Spend. Target: 5–7× during scaling phase</li>
+                  </ul>
+                  <div class="outcome-pill">Outcome: Spend scales with mathematical confidence</div>
+                </div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">Critical Watch Point</div>
+                <div class="step-col-text">
+                  <strong>Do not increase budget by more than 20–25% in a single day.</strong> A sudden large budget jump breaks Meta's delivery algorithm and resets the learning phase — costing you 5–7 days of inefficient spend. Slow, disciplined scaling consistently outperforms aggressive budget spikes.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-num">Step 11</div>
+            <div class="step-summary">
+              <div class="step-title">The 30-Day Performance Audit</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="step-complexity moderate">Complexity: Moderate</div>
+                <div class="step-chevron">▼</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-body-inner">
+              <div class="step-col">
+                <div class="step-col-label">The Action</div>
+                <div class="step-col-text">
+                  On Day 28, compare Week 4 Mobile CVR against the Week 1 baseline. Run a full blended MER audit:
+                  <ul>
+                    <li><strong>If CVR improved</strong> (e.g., 1.8% → 2.5%+), increase Meta spend by 15% every 3 days going forward</li>
+                    <li><strong>MER safety band:</strong> Keep blended MER at 12–15× during scaling. If MER drops below 10×, stop scaling and re-audit mobile checkout</li>
+                    <li><strong>Measure replenishment revenue</strong> separately to understand true retention economics</li>
+                  </ul>
+                  <div class="outcome-pill">Outcome: Data-backed scaling roadmap to ₹20L+</div>
+                </div>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">The Bigger Picture</div>
+                <div class="step-col-text">
+                  This audit is not the end — it is the beginning of Month 2. If the system has been correctly implemented, you will have: a measured LTV, a proven TOF offer, an automated retention engine, and a protected margin stack. That is the infrastructure for scaling to ₹20L with confidence.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div><!-- /week-panels -->
+
+  </div>
+</section>
+
+<!-- SUMMARY TABLE -->
+<section style="background:var(--ivory-deep);padding:56px 0">
+  <div class="container">
+    <div class="sec-label-row reveal">
+      <span class="sec-label">Master Summary</span>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="sec-heading reveal">All 11 Steps at a Glance</div>
+
+    <table class="sum-table reveal">
+      <thead>
+        <tr>
+          <th style="width:7%">Step</th>
+          <th style="width:26%">Action</th>
+          <th style="width:10%">Week</th>
+          <th style="width:12%">Complexity</th>
+          <th>Expected Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>Install Clariva Measurement Stack (LTV Cohorts)</td>
+          <td><span class="td-badge" style="background:#eaf2ed;color:var(--green)">Week 1</span></td>
+          <td><span class="td-badge badge-low">Low</span></td>
+          <td class="td-outcome">90-day LTV baseline visible · Scaling confidence unlocked</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Device-Split CVR Measurement (Desktop vs. Mobile)</td>
+          <td><span class="td-badge" style="background:#eaf2ed;color:var(--green)">Week 1</span></td>
+          <td><span class="td-badge badge-low">Low</span></td>
+          <td class="td-outcome">Mobile bottleneck quantified · Priority fix identified</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Mobile UX Friction Test + Sticky ATC / Reviews / Pop-up Cleanse</td>
+          <td><span class="td-badge" style="background:#eaf2ed;color:var(--green)">Week 1</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">Mobile CVR lift +0.3–0.5% · Reduced bounce rate</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>Eco-Lite Shipping Protocol (Tiered Packaging)</td>
+          <td><span class="td-badge" style="background:#eaf2ed;color:var(--green)">Week 1</span></td>
+          <td><span class="td-badge badge-low">Low</span></td>
+          <td class="td-outcome">₹40–50 saved per acquisition order · ~₹45K/mo recovered</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>WhatsApp COD Verification Flow (Interakt / BiteSpeed)</td>
+          <td><span class="td-badge" style="background:#eaf2ed;color:var(--green)">Week 1</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">RTO: 30% → &lt;15% · ₹15–20K/mo logistics recovery</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>Hero Shift in Meta Ads (Kit → Repair Oil as TOF Hero)</td>
+          <td><span class="td-badge" style="background:#faf3e6;color:var(--gold)">Week 2</span></td>
+          <td><span class="td-badge badge-low">Low</span></td>
+          <td class="td-outcome">Site-wide CVR: 2% → 3.5%+ without new creative</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>Impact-First PDP Rebuild (Visual Results Above the Fold)</td>
+          <td><span class="td-badge" style="background:#faf3e6;color:var(--gold)">Week 2</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">Faster ATC velocity · Reduced PDP bounce rate</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>45-Day WhatsApp Replenishment Loop (Day 35 + Day 42)</td>
+          <td><span class="td-badge" style="background:#e8eee8;color:var(--forest)">Week 3</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">+10–15% automated repeat revenue · Zero ad cost</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>Trial-to-Routine Upsell (Starter Kit as Post-Purchase Cross-sell)</td>
+          <td><span class="td-badge" style="background:#e8eee8;color:var(--forest)">Week 3</span></td>
+          <td><span class="td-badge badge-low">Low</span></td>
+          <td class="td-outcome">AOV protected · Starter Kit converts at higher rate</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>MER Scaling Test (20% budget increase every 3 days)</td>
+          <td><span class="td-badge" style="background:#ededec;color:var(--stone)">Week 4</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">Spend scales mathematically · Algorithm stability maintained</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>30-Day Performance Audit + Month 2 Scaling Roadmap</td>
+          <td><span class="td-badge" style="background:#ededec;color:var(--stone)">Week 4</span></td>
+          <td><span class="td-badge badge-mod">Moderate</span></td>
+          <td class="td-outcome">Full system validated · Clear path to ₹20L+ established</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- BOTTOM BAND -->
+<section class="bottom-band">
+  <div>
+    <div class="bb-label">The Bottom Line</div>
+    <div class="bb-text">By fixing these four levers, we don't just "grow" revenue — we unlock the ability to scale to ₹20L+ at the same efficiency you have today.</div>
+    <div class="bb-sub">You don't need more influencers or a larger budget. You need a system that stops rejecting the traffic you're already paying for. These 11 steps build that system — in 30 days, with your existing team.</div>
+  </div>
+  <div>
+    <div class="bb-label">Key Milestones</div>
+    <div class="bb-milestones">
+      <div class="bb-milestone">
+        <div class="bb-day">Day 7</div>
+        <div class="bb-ms-text"><strong>Measurement Stack live.</strong> LTV baseline established. RTO verification active. Eco-Lite packaging deployed.</div>
+      </div>
+      <div class="bb-milestone">
+        <div class="bb-day">Day 14</div>
+        <div class="bb-ms-text"><strong>Acquisition pivoted.</strong> Repair Oil is TOF hero. PDP rebuilt for impact-first conversion.</div>
+      </div>
+      <div class="bb-milestone">
+        <div class="bb-day">Day 21</div>
+        <div class="bb-ms-text"><strong>Retention engine running.</strong> 45-day loop active. Starter Kit repositioned as cross-sell.</div>
+      </div>
+      <div class="bb-milestone">
+        <div class="bb-day">Day 30</div>
+        <div class="bb-ms-text"><strong>System validated.</strong> CVR at 3.5%+. Revenue trajectory toward ₹15L confirmed. Scale begins.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <span class="footer-text">clariva.home@gmail.com</span>
+  <span class="footer-text">CLARIVA · Marketing Diagnostic Advisory · April 2026 · Confidential</span>
+  <span class="footer-text">clariva-home.github.io/Clariva</span>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, { threshold: 0.08, rootMargin:'0px 0px -30px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// ── STAGGER HERO REVEALS ──
+document.querySelectorAll('.hero .reveal').forEach((el,i)=>{
+  el.style.transitionDelay = (i * 0.1) + 's';
+});
+
+// ── BAR ANIMATIONS ──
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const bar = e.target;
+      const w = bar.getAttribute('data-width');
+      setTimeout(()=>{ bar.style.width = w+'%'; }, 200);
+      barObserver.unobserve(bar);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.oc-bar, .pc-fill').forEach(b => barObserver.observe(b));
+
+// ── WEEK TABS ──
+document.querySelectorAll('.week-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const w = tab.dataset.week;
+    document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.week-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('week-'+w).classList.add('active');
+  });
+});
+
+// ── STEP ACCORDION ──
+function toggleStep(header) {
+  const card = header.closest('.step-card');
+  const isOpen = card.classList.contains('open');
+  // close others in same list
+  const siblings = card.closest('.steps-list').querySelectorAll('.step-card');
+  siblings.forEach(s => s.classList.remove('open'));
+  if(!isOpen) card.classList.add('open');
+}
+
+// ── NUMBER COUNT-UP ──
+function countUp(el, target, prefix='', suffix='', duration=1800) {
+  const start = performance.now();
+  const isFloat = target % 1 !== 0;
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const val = isFloat ? (target * ease).toFixed(1) : Math.round(target * ease);
+    el.textContent = prefix + val + suffix;
+    if(progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+</script>
+</body>
+</html>
